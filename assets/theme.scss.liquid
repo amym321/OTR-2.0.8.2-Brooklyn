@@ -4827,3 +4827,38 @@ button.mfp-arrow {
 .template-cart header.section-header.text-center {
   margin-bottom: 30px;
 }
+
+/*************************/
+/*   added styles - am   */
+/*************************/
+
+/* pdp qty selector */
+.product-single__quantity input  {
+  border-radius: 1rem; 
+}
+
+.qty-atc-container #Quantity {
+  border-color: #393;
+  background-color: #33993327;
+}
+
+@media screen and (min-width: 1000px) {
+  .qty-atc-container, .product-single__quantity {
+    display:flex;
+  }
+  .product-single__quantity input  {
+    margin: 0 20px 10px 0;
+    width: 100px;
+    padding-right: 20px;
+  }
+  .product-single__quantity label {
+    position: relative;
+    top: 12px;
+  }
+}
+
+
+/* cart */
+.cart__subtotal-container .update-cart {
+  border: 2px solid #393;
+}

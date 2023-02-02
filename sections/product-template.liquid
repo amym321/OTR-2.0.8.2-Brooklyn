@@ -382,11 +382,15 @@
                 <hr>
             {% endif %}
 
+            <div class="qty-atc-container">
+
               {% if section.settings.quantity_enabled %}
-              <div class="product-single__quantity">
-                <label for="Quantity" class="product-single__quantity-label js-quantity-selector">{{ 'products.product.quantity' | t }}</label>
-                <input type="number" hidden="hidden" id="Quantity" name="quantity" value="1" min="1" class="js-quantity-selector">
-              </div>
+                {% if product.title contains 'Reset Tool' or product.title contains 'reset tool'%}
+                  <div class="product-single__quantity">
+                    <label for="Quantity" class="product-single__quantity-label js-quantity-selector">{{ 'products.product.quantity' | t }}</label>
+                    <input type="number" id="Quantity" name="quantity" value="1" min="1" class="js-quantity-selector">
+                  </div>
+                {% endif %}
               {% endif %}
 
               <div class="product-single__add-to-cart{% if section.settings.add_to_cart_button_size == 'large' %} product-single__add-to-cart--full-width{% endif %}">
@@ -482,6 +486,9 @@
                   {{ form | payment_button }}
                 {% endif %}
               </div>
+
+            </div>
+
             {% endform %}
 
           </div>
