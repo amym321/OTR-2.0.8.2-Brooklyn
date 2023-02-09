@@ -32,10 +32,19 @@
 	</style>
 	<!-- Subscriptions Powered by ReCharge Payments: JS -->
 	<script>
+    console.log('log 21) rtbundleValue = '+ rtbundleValue );
+
 		function get_cart_token() {
 			// Build the cart_token param for the URL generator
 			try {
-				return ['cart_token=' + (document.cookie.match('(^|; )cart=([^;]*)')||0)[2]];
+				//return ['cart_token=' + (document.cookie.match('(^|; )cart=([^;]*)')||0)[2]];
+				//return ['cart_token=' + (document.cookie.match('(^|; )cart=([^;]*)')||0)[2]] + '&discount=RTBUNDLE5';
+				// add RTBUNDLE discount code to url if valid
+				if (rtbundleValue > 0) {
+					return ['cart_token=' + (document.cookie.match('(^|; )cart=([^;]*)')||0)[2]] + '&discount=RTBUNDLE' + rtbundleValue;
+				} else {
+					return ['cart_token=' + (document.cookie.match('(^|; )cart=([^;]*)')||0)[2]];
+				}
 			} catch (e) {
 				return [];
 			}
