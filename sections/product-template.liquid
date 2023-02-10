@@ -387,7 +387,7 @@
               {% if section.settings.quantity_enabled %}
                 {% if product.title contains 'Reset Tool' or product.title contains 'reset tool'%}
                   <div class="product-single__quantity">
-                    <label for="Quantity" class="product-single__quantity-label js-quantity-selector">{{ 'products.product.quantity' | t }}</label>
+                    <label for="Quantity" class="product-single__quantity-label js-quantity-selector"></label>
                     <input type="number" id="Quantity" name="quantity" value="1" min="1" class="js-quantity-selector">
                   </div>
                 {% endif %}
