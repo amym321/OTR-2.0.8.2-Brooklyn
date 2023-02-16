@@ -156,9 +156,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- End Google Tag Manager -->
 
   {% capture lidl %}
-    <!-- Start of Littledata - Fix Google Analytics Script -->
-    {% include 'LittledataLayer' %}
-    <!-- End of Littledata - Fix Google Analytics Script -->
   {% endcapture %}{{ lidl | replace: 'src="', 'data-deffered data-src="'}}
 
   {% render 'shogun-head' %}
