@@ -12,6 +12,13 @@ html {
   border-radius: 15px!important;
 }
 
+@media (max-width: 576px) {
+.stamped-badge-caption {
+  font-size: 14px;
+  font-weight: 600;
+}
+}
+
 .card-img-top {
 	border-top-left-radius: 1rem;
 	border-top-right-radius: 1rem;
