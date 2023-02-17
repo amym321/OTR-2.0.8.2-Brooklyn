@@ -4833,7 +4833,7 @@ button.mfp-arrow {
 /*   added styles - am   */
 /*************************/
 
-/* pdp qty selector */
+/* PDP qty selector */
 .product-single__quantity input  {
   border-radius: 1rem; 
 }
@@ -4841,7 +4841,6 @@ button.mfp-arrow {
 .qty-atc-container #Quantity {
   border-color: #393;
   background-color: #fff; 
-  text-align: center;
 }
 
 /* @media screen and (min-width: 1000px) { */
@@ -4851,23 +4850,76 @@ button.mfp-arrow {
   .product-single__quantity input  {
     margin: 0 20px 10px 0;
     width: 100px;
-    
+    padding-right: 20px;
   }
   .product-single__quantity label {
     position: relative;
     top: 12px;
+    margin:0;
   }
 /* } */
 
-/* pdp qty selector visible not just on hover */
+/* PDP qty selector visible not just on hover */
 input[type=number]::-webkit-inner-spin-button, 
 input[type=number]::-webkit-outer-spin-button { 
   opacity:1 !important;
   visibility:1 !important;
 }
 
+/* ATC & qty selector on Collection page */
+@media screen and (min-width: 769px) {
+  .template-collection .qty-atc-container  {
+    margin-bottom: 50px;
+  }
+  .template-collection .product-single__add-to-cart {
+    margin:0;
+  }
+}
+
+.template-collection .qty-atc-container .btn--add-to-cart {
+  margin: 10px 10px 10px 0;
+}
+
+.template-collection .qty-atc-container .product-single__quantity-label input {
+  margin: 0 20px 10px 0;
+  width: 80px;
+}
+
+@media screen and (max-width: 1080px) {
+  .template-collection .qty-atc-container .btn {
+    font-size: 13px;
+  }
+}
+
+@media screen and (max-width: 840px) {
+  .template-collection  .qty-atc-container .btn--add-to-cart.btn {
+    padding: 0;
+  }
+  .template-collection .qty-atc-container .btn--add-to-cart {
+    min-width: unset;
+    margin: 10px 10px 10px 0;
+  }
+  .template-collection .qty-atc-container  .product-single__quantity input {
+    margin: 0 5px 10px 0;
+    width: 45px;
+    padding-right: unset;
+  }
+  .template-collection .qty-atc-container .product-single__quantity {
+    height: 52px;
+  }
+  .template-collection .qty-atc-container .product-single__add-to-cart input {
+    height: 40px;
+  }
+  .template-collection .qty-atc-container input {
+    border-radius: 0.75rem;
+  }
+  .template-collection .qty-atc-container #addToCartJoinWaitlist  {
+    padding-top: 10px;
+  }
+}
+
 
 /* cart */
 .cart__subtotal-container .update-cart {
-  border: 1px solid #393;
+  border: 2px solid #393;
 }
